@@ -25,12 +25,19 @@ superman.SuperPoderes = poderesSuperman;
 
 class SuperHeroe
 {
-    public int Id;
+    public int Id = 1;
     public string Nombre;
     public string IdentidadSecreta;
     public string Ciudad;
-    public List<SuperPoder> SuperPoderes;
+    public List<SuperPoder> SuperPoderes = new List<SuperPoder>();
     public bool PuedeVolar;
+
+    public SuperHeroe()
+    {
+        Id = 1;
+        SuperPoderes = new List<SuperPoder>();
+        PuedeVolar = false;
+    }
 }
 
 class SuperPoder
@@ -38,6 +45,11 @@ class SuperPoder
     public string Nombre;
     public string Descripcion;
     public NivelPoder Nivel;
+
+    public SuperPoder()
+    {
+        Nivel = NivelPoder.NivelUno;
+    }
 }
 
 enum NivelPoder
