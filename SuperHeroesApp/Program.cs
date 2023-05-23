@@ -14,18 +14,11 @@ superFuerza.Nivel = NivelPoder.NivelTres;
 var superman = new SuperHeroe();
 
 superman.Id = 1;
-superman.Nombre = "Superman";
+superman.Nombre = "   Superman   ";
 superman.IdentidadSecreta = "Clark Kent";
 superman.Ciudad = "Metropolis";
 superman.PuedeVolar = true;
 
-var superman2 = new SuperHeroe();
-
-superman2.Id = 1;
-superman2.Nombre = "Superman";
-superman2.IdentidadSecreta = "Clark Kent";
-superman2.Ciudad = "Metropolis";
-superman2.PuedeVolar = true;
 
 List<SuperPoder> poderesSuperman = new List<SuperPoder>();
 poderesSuperman.Add(poderVolar);
