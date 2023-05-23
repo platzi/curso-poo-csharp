@@ -1,5 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using System.Text;
 
 var poderVolar = new SuperPoder();
 poderVolar.Nombre = "Volar";
@@ -22,6 +22,8 @@ List<SuperPoder> poderesSuperman = new List<SuperPoder>();
 poderesSuperman.Add(poderVolar);
 poderesSuperman.Add(superFuerza);
 superman.SuperPoderes = poderesSuperman;
+string resultSuperPoderes = superman.UsarSuperPoderes();
+Console.WriteLine(resultSuperPoderes);
 
 class SuperHeroe
 {
@@ -37,6 +39,17 @@ class SuperHeroe
         Id = 1;
         SuperPoderes = new List<SuperPoder>();
         PuedeVolar = false;
+    }
+
+    public string UsarSuperPoderes()
+    {
+        StringBuilder sb = new StringBuilder();
+        foreach (var item in SuperPoderes)
+        {
+            sb.AppendLine($"{Nombre} esta usando el super poder {item.Nombre}!!");
+        }
+
+        return sb.ToString();
     }
 }
 
