@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SuperHeroesApp.Models
 {
-    class SuperHeroe
+    class SuperHeroe : Heroe
     {
         private string _Nombre;
         public int Id = 1;
-        public string Nombre 
+        public override string Nombre 
         { 
             get
             {
@@ -53,6 +53,11 @@ namespace SuperHeroesApp.Models
             }
 
             return sb.ToString();
+        }
+
+        public override string SalvarElMundo()
+        {
+            return $"{NombreEIdentidadSecreta} ha salvado el mundo";
         }
     }
 
