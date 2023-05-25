@@ -11,9 +11,7 @@ namespace SuperHeroesApp
     {
         public void ImprimirSuperHeroe(ISuperHeroe superHeroe)
         {
-            Console.WriteLine($"Id: {superHeroe.Id}");
-            Console.WriteLine($"Nombre: {superHeroe.Nombre}");
-            Console.WriteLine($"Identidad secreta: {superHeroe.IdentidadSecreta}");
+            Console.WriteLine(superHeroe.GetSuperHeroe());
         }
     }
 }

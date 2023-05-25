@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperHeroesApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,14 @@ namespace SuperHeroesApp.Interfaces
         int Id { get; set; }
         string Nombre { get; set; }
         string IdentidadSecreta { get; set; }
+
+        string GetSuperHeroe()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"Id: {Id}");
+            sb.AppendLine($"Nombre: {Nombre}");
+            sb.AppendLine($"Identidad secreta: {IdentidadSecreta}");
+            return sb.ToString();
+        }
     }
 }
